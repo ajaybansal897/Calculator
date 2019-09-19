@@ -107,5 +107,22 @@ namespace Test_project_19th_Sep_2019
             //Assert 
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [Test]
+        public void Division_Input100_Input1_Returns0()
+        {
+            //Arrangedouble 
+            int num1 = 100;
+            int num2 = 1;
+
+
+            double expectedResult = num1 / num2;
+
+            Calc testCalc = new Calc(num1, num2);
+            //Act 
+            double actualResult = testCalc.GetDivision();
+            //Assert 
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
