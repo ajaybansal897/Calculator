@@ -11,13 +11,40 @@ namespace Test_project_19th_Sep_2019
     public class Class1
     {
         [Test]
-        public void GetAddition_Input3point4and5point6_Returns9point0()
+        public void GetAddition_Input2_Input_10_Returns9point0()
         {
             //Arrangedouble 
-            double number1 = 3.4;
-            double number2 = 5.6;
+            int number1 = 2;
+            int number2 = 10;
 
-            double expectedResult = number1 + number2; Calc testCalc = new Calc(number1, number2);
+            int expectedResult = number1 + number2; Calc testCalc = new Calc(number1, number2);
+            //Act 
+            double actualResult = testCalc.GetAddition();
+            //Assert 
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [Test]
+        public void GetAddition_Input0_Input_0_Returns0()
+        {
+            //Arrangedouble 
+            int number1 = 0;
+            int number2 = 0;
+
+            int expectedResult = number1 + number2; Calc testCalc = new Calc(number1, number2);
+            //Act 
+            double actualResult = testCalc.GetAddition();
+            //Assert 
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void GetAddition_Inputminus10Inputminus100_Returnsminus110()
+        {
+            //Arrangedouble 
+            int number1 = -10;
+            int number2 = -100;
+
+            int expectedResult = number1 + number2; Calc testCalc = new Calc(number1, number2);
             //Act 
             double actualResult = testCalc.GetAddition();
             //Assert 
@@ -40,6 +67,37 @@ namespace Test_project_19th_Sep_2019
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        [Test]
+        public void GetSubtraction_Input0_Input0_Returns0()
+        {
+            //Arrangedouble 
+            int num1 = 0;
+            int num2 = 0;
+
+            double expectedResult = num1 - num2;
+
+            Calc testCalc = new Calc(num1, num2);
+            //Act 
+            double actualResult = testCalc.GetSubtraction();
+            //Assert 
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void GetSubtraction_Inputminus20_Inputminus40_Returns20()
+        {
+            //Arrangedouble 
+            int num1 = -20;
+            int num2 = -40;
+
+            double expectedResult = num1 - num2;
+
+            Calc testCalc = new Calc(num1, num2);
+            //Act 
+            double actualResult = testCalc.GetSubtraction();
+            //Assert 
+            Assert.AreEqual(expectedResult, actualResult);
+        }
         [Test]
         public void Multiplication_Input12_Input0_Returns0()
         {
@@ -74,6 +132,23 @@ namespace Test_project_19th_Sep_2019
 
 
         }
+
+        [Test]
+        public void Multiplication_Input0_Input0_Returns0()
+        {
+            //Arrangedouble 
+            int num1 = 0;
+            double num2 = 0;
+
+
+            double expectedResult = num1 * num2;
+
+            Calc testCalc = new Calc(num1, num2);
+            //Act 
+            double actualResult = testCalc.GetMultiplication();
+            //Assert 
+            Assert.AreEqual(expectedResult, actualResult);
+        }
         [Test]
         public void Division_Input90_Input2_Returns45()
         {
@@ -97,6 +172,23 @@ namespace Test_project_19th_Sep_2019
             //Arrangedouble 
             int num1 = 0;
             int num2 = 58;
+
+
+            double expectedResult = num1 / num2;
+
+            Calc testCalc = new Calc(num1, num2);
+            //Act 
+            double actualResult = testCalc.GetDivision();
+            //Assert 
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [Test]
+        public void Division_Input100_Input1_Returns0()
+        {
+            //Arrangedouble 
+            int num1 = 100;
+            int num2 = 1;
 
 
             double expectedResult = num1 / num2;
